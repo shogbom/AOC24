@@ -17,6 +17,7 @@ using std::ofstream;
 using std::stringstream;
 
 bool safe(vector<int> reps);
+bool safe_damp(vector<int> reps);
 
 int main()
 {
@@ -52,9 +53,27 @@ int main()
         if (safe(data[y]))
         {
             rep++;
+        } else if(safe_damp(data[y])){
+            rep++;
         }
     }
     cout << rep << endl;
+}
+
+bool safe_damp(vector<int> reps){
+    for(unsigned int k = 0; k < reps.size(); k++){
+        vector<int> temp;
+        for(unsigned int i = 0; i < reps.size(); i++){
+            if(k != i){
+                temp.push_back(reps[i]);
+            }
+        }
+        if(safe(temp)){
+            return true;
+        }
+    }
+    return false;
+
 }
 
 bool safe(vector<int> reps)
