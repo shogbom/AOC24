@@ -58,6 +58,7 @@ int main()
         }
     }
     cout << rep << endl;
+    file.close();
 }
 
 bool safe_damp(vector<int> reps){

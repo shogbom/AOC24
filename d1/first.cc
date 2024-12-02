@@ -61,4 +61,5 @@ int main()
 
     }
     cout << distance  << endl;
+    file.close();
 }

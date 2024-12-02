@@ -55,6 +55,7 @@ int main()
         }
     }
     cout << rep << endl;
+    file.close();
 }
 
 bool safe(vector<int> reps)

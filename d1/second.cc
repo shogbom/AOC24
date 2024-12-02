@@ -39,4 +39,5 @@ int main()
         sim += left[i] * times;
     }
     cout << sim << endl;
+    file.close();
 }
